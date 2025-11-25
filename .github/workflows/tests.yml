@@ -18,5 +18,8 @@ jobs:
           java-version: '17'
           distribution: 'temurin'
 
-      - name: Build with Maven
+      - name: Run tests
         run: mvn -B test
+
+      - name: Run linter
+        run: mvn -B checkstyle:check
