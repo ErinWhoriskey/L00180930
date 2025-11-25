@@ -1,8 +1,9 @@
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 
-class HelloWorldOutputTest {
-    //test to validate input
+class HelloWorldTest {
+
+    // Test to validate program output
     @Test
     void testMainOutput() {
         java.io.ByteArrayOutputStream out = new java.io.ByteArrayOutputStream();
@@ -10,14 +11,10 @@ class HelloWorldOutputTest {
 
         HelloWorld.main(null);
 
-        String expected = "Hello World";
-        String actual = out.toString().trim();
-
-        assertEquals(expected, actual);
+        assertEquals("Hello World", out.toString().trim());
     }
-    //test to ensure main doesnt throw errors
-    class HelloWorldNoCrashTest {
 
+    // Test to ensure program doesn't throw an exception
     @Test
     void testMainDoesNotThrow() {
         assertDoesNotThrow(() -> HelloWorld.main(null));
