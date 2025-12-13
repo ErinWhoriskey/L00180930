@@ -1,15 +1,21 @@
+import java.util.logging.Logger;
+
 /**
- * Entry point for the application.
- * Prints a Hello World message to the console.
+ * Simple Hello World application.
  */
 public class HelloWorld {
 
+    private static final Logger logger =
+            Logger.getLogger(HelloWorld.class.getName());
+
     /**
-     * Main method.
+     * Program entry point.
      *
      * @param args command-line arguments
      */
     public static void main(String[] args) {
+        logger.info("Application started");
         System.out.println("Hello World");
+        logger.info("Application finished");
     }
 }
